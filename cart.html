@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="capstone.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="capstoneStyle.css">
+    <title>My Shopping Cart</title>
+</head>
+<body>
+    <div class="container">
+		<div class="navbar">
+			<!--The navbar for the product pages include all the internal links to the other main pages-->
+			<a href="landingPage.html">Home</a>
+			<a href="aboutUs.html">About Us</a>
+			<a href="cataloguePage.html">Catalogue</a>
+			<a href="shipping.html">Shipping</a>
+		</div>
+	</div>
+    <h1>My Shopping Cart</h1>
+
+    <!--These are the headings where the product that was added to cart will go under-->
+    <div class="myCart">
+        <div class="headings">
+            <h4 class="product">Product</h4>
+            <h4 class="price">Price</h4>
+            <h4 class="quantity">Quantity</h4>
+            <h4 class="total">Total</h4>
+        </div>
+        <div class="display">
+        </div>
+    </div>
+
+    <!--the coupon name is set to coupon so that i can use it in the js file-->
+    <div class="cartForm" id="coupon">
+    <form action="">
+        <h4 class="form">Coupon</h4>
+        <label for="coupon">Enter code to get a 25% discount on your total</label>
+        <input type="text" name="coupon">
+        <br>
+        <button type="button" class="couponBtn" type="submit" onclick="enterCouponCode()">Redeem</button>
+    </form>
+    </div>
+
+    <!--This form is for the radio buttons to select cdollection or delivery-->
+    <div class="cartForm" id="coll-del">
+    <h4 class="form">Choose collection or delivery</h4>
+    <form>
+        <input type="radio" value="collection" id="collect" name="select">
+        <label for="collection">Collection</label>
+        <input type="radio" value="delivery" id="deliver" name="select">
+        <label for="delivery">Delivery</label>
+    </form>
+    </div>
+
+    <!--This form will be made available to the user if they clicked on the above radio button for delivery otherwise if they clicked collection it will remain hidden-->
+    <div class="cartForm" id="delivery-options">
+    <form >
+        <h4 class="form">Delivery Options</h4>
+        <!--Both radio buttons have an onclick event with the same function name but the values are different-->
+        <input type="radio" name="delivery-option" value="50" onclick="deliveryOption()">
+		<label for="within SA" class="delivery">R50 within South Africa</label>
+		<br>
+		<input type="radio" name="delivery-option" value="100" onclick="deliveryOption()">
+		<label for="international" class="delivery">R100 International delivery</label>
+		<br>
+    </form>
+    </div>
+
+    <!--This div shows the layout of the price and the total of the cart-->
+    <div class="finalTotal">
+        <table class="container">
+            <tbody>
+            <tr>
+                <td class="total-heading"><h4>SUBTOTAL</h4></td>
+                <td id="subtotal" class="total-block"></td>
+            </tr>
+            <tr>
+                <td class="total-heading"><h4>DISCOUNT</h4></td>
+                <td id="discount" class="total-block"></td>
+            </tr>
+            <tr>
+                <td class="total-heading"><h4>DELIVERY</h4></td>
+                <td id="deliveryFee" class="total-block"></td>
+            </tr>
+            <tr>
+                <td class="total-heading"><h4>VAT</h4></td>
+                <td id="vat" class="total-block"></td>
+            </tr>
+            <tr>
+                <td class="total-heading"><h4>TOTAL</h4></td>
+                <td id="total" class="total-block"></td>
+            </tr>
+            </tbody>
+        </table>
+        <!--I added an onclick event to the confirm button which i use in js-->
+        <button type="submit" class="confirmBtn" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+
+    </div>
+    
+</body>
+</html>

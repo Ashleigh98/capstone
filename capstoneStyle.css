@@ -1,0 +1,339 @@
+body {
+	background-image: url("images/mountainBack.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	/*the code below centers the content of the page*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.navbar {
+	background-color: #ad4fc3;
+	border-radius: 10px;
+	width: 100%;
+	
+}
+/*the more buttons on the catalogue page*/
+.cardContainer {
+	overflow: hidden;
+}
+a.more {
+
+	border: solid;
+	text-align: center;
+	padding: none;
+	margin-top: 5px;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 10px;
+}
+
+a {
+	color:#650865 ;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+a:hover {
+	color:white ;
+	text-decoration: none;
+}
+p {
+	font-size: large;
+}
+
+h1 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-family: cursive;
+	color: #7b323d;
+	font-style: oblique;
+}
+
+
+h2 {
+	text-align: center;
+	font-family: monospace;
+	font-style: italic;
+	color:black ;
+
+}
+h3 {
+	text-align: center;
+	font-style: normal;
+	font-family: fantasy;
+	color: #611871;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+h4 {
+	text-align: center;
+}
+h5 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 20%;
+}
+
+.icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	border: solid;
+	border-width: thick;
+	border-radius: 30%;
+	padding: 5px;
+	filter: sepia(50%);
+
+}
+.img-thumbnail{
+	border: solid;
+	object-fit: contain;
+	width: 230px;
+	height: 230px;
+	padding: 5px;
+	float: left;
+	margin: 15px;
+	/*the transition and the transform in the image hover allows the image to be resized for .5s while the user hovers the mouse over the image*/
+	/*transition: .5s;*/
+}
+/*.img-thumbnail:hover {
+	transform: scale(1.5);
+}*/
+
+.product-image {
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	border: solid;
+	border-radius: 20%;
+
+}
+
+.addBtn {
+	float: right;
+	border-radius: 10px;
+}
+
+.review-box1 {
+	/*The review boxes are floated next to each other on the landing page*/
+	float: left;
+	width: 50%;
+	background-color: white;
+	border-radius: 10px;
+	border: solid;
+	padding: 3%;
+
+}
+.review-box2 {
+	float: right;
+	width: 50%;
+	background-color: white;
+	border-radius: 10px;
+	border: solid;
+	padding: 3%;
+}
+
+.image-box {
+	float: left;
+}
+
+.side-box{
+	float: right;
+	width: 70%;
+	background-color: #fd819b;
+	padding: 10px;
+	border: solid;
+	border-radius: 10px;
+}
+
+#table-container {
+	display: block;
+	background-color: #ea7273;
+	border: solid;
+	margin-bottom: 50px;
+	border-radius: 10px;
+
+}
+
+.shipping {
+	background-color: #ffb79e;
+	border-radius: 10px;
+	padding: 10%;
+	margin-bottom: 10%;
+	/*color animation for this container and duration*/
+	animation-name: color-change;
+	animation-duration: 5s;
+}
+
+.about-us {
+	background-color: #ffb79e;
+	border-radius: 10px;
+	padding: 10%;
+	margin-bottom: 10%;
+	/*color animation for this container and duration*/
+	animation-name: color-change;
+	animation-duration: 5s;
+}
+
+.button {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.float-container {
+	white-space: normal;
+}
+
+.info-container {
+	padding: 20px;
+	background-color: #ffb79e;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	/*color animation for this container and duration*/
+	animation-name: color-change;
+	animation-duration: 5s;
+}
+
+#submit {
+	/*I gave a bit of space around the submit button so its not right up against other elements*/
+	margin: 10px;
+	padding: 5px;
+}
+ul {
+	list-style-type: circle;
+}
+
+@keyframes color-change{
+	/*These are the color transitions for the background animation*/
+	0% {background-color: #ffb79e;}
+	25% {background-color: #fd819b;}
+	50% {background-color: #ea7273;}
+	100% {background-color: #ad4fc3;}
+}
+
+.card {
+	background-color: #ea7273;
+	padding-left: 10px;
+	margin: 15px;
+	width: 400px;
+	height: 250px;
+	float: right;
+	border: none;
+}
+/*----------add to cart in cart.html----------*/
+.cartImage {
+	border: solid;
+	object-fit: contain;
+	width: 200px;
+	max-height: 200px;
+}
+
+.headings {
+	display: flex;
+	border-bottom: solid thin white;
+	border-top: solid white;
+	width: 100%;
+	text-align: center;
+	font-size: large;
+	color: white;
+	padding: 5px;
+}
+
+.inCart {
+	display: flex;
+	width: 100%;
+	border-bottom: solid thin white;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.myCart {
+	background-color: #fd819b;
+	border-radius: 10px;
+	padding: 10px;
+}
+/* spacing the headings*/
+.product {
+	width: 40%;	
+}
+
+.price{
+	width: 20%;
+}
+
+.quantity {
+	width: 20%;
+}
+
+.total {
+	width: 20%;
+}
+/*--------style for cart total divs---------*/
+.form {
+	color: white;
+	border-bottom: solid thin white;
+	border-top: solid white;
+}
+.cartForm {
+	background-color:#fd819b ;
+	border-radius: 10px ;
+	padding: 10px;
+	margin-top: 20px;
+}
+.couponBtn {
+	border-radius: 5px;
+	color: #ad4fc3;
+}
+.finalTotal {
+	background-color: #ad4fc3;
+	color: white;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+.total-block {
+	margin: 10px;
+	float: right;
+}
+.total-heading{
+	float: left;
+}
+#total{
+	border-bottom:solid white;
+	border-top: solid thin white;
+}
+.confirmBtn {
+	border-radius: 5px;
+}
+/*------styling for the dropdown menu-------*/
+.option-info {
+	border: solid thin white;
+	border-radius: 5px;
+	color: white;
+	background-color: #611871;
+	/*centering it on the page*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-bottom: 15px;
+}
+.option {
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	background-color: #fd819b;
+	margin-bottom: 15px;
+}
+#dropdown-container {
+	margin: 30px;
+}
